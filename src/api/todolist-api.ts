@@ -34,6 +34,7 @@ type TodoType={
     order: number
     title: string
 }
+const imTheBest="artem"
 
 type CommonResponseType<T={}>={
     resultCode: number
