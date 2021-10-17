@@ -20,11 +20,11 @@ export const todolistAPI = {
 
     },
     deleteTodolist(todolistId: string) {
-        return instance.delete<CommonResponseType<{}>>(`todo-lists/${todolistId}`)
+        return instance.delete<CommonResponseType>(`todo-lists/${todolistId}`)
 
     },
     updateTodolist(todolistId: string, title: string) {
-        return instance.put<CommonResponseType<{}>>(`todo-lists/${todolistId}`, {title})
+        return instance.put<CommonResponseType>(`todo-lists/${todolistId}`, {title})
 
     }
 }
@@ -35,7 +35,7 @@ type TodoType={
     title: string
 }
 
-type CommonResponseType<T>={
+type CommonResponseType<T={}>={
     resultCode: number
     messages: Array<string>,
     fieldsErrors:Array<string>,
